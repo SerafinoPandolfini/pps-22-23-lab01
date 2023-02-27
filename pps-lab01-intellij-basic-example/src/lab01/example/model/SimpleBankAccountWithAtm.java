@@ -4,8 +4,12 @@ public class SimpleBankAccountWithAtm implements BankAccount {
 
     private final AccountHolder holder;
 
-    public SimpleBankAccountWithAtm(AccountHolder accountHolder, int i) {
+    private double balance;
+
+    public SimpleBankAccountWithAtm(AccountHolder accountHolder, double i) {
         holder = accountHolder;
+        balance = i;
+
     }
 
     @Override
@@ -15,7 +19,7 @@ public class SimpleBankAccountWithAtm implements BankAccount {
 
     @Override
     public double getBalance() {
-        return 0;
+        return balance;
     }
 
     @Override

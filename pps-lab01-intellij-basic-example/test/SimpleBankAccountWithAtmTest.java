@@ -17,7 +17,7 @@ public class SimpleBankAccountWithAtmTest {
     @BeforeEach
     void beforeEach(){
         accountHolder = new AccountHolder("Luigi", "Bianchi", 2);
-        bankAccount = new SimpleBankAccountWithAtm(accountHolder, 0);
+        bankAccount = new SimpleBankAccountWithAtm(accountHolder, 100);
     }
 
     @Test
@@ -26,5 +26,10 @@ public class SimpleBankAccountWithAtmTest {
         assertEquals(holder.getName(), accountHolder.getName());
         assertEquals(holder.getSurname(), accountHolder.getSurname());
         assertEquals(holder.getId(), accountHolder.getId());
+    }
+
+    @Test
+    void testInitialBalance() {
+        assertEquals(100, bankAccount.getBalance());
     }
 }
