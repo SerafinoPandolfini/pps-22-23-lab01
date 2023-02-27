@@ -50,13 +50,16 @@ public class SimpleBankAccountWithAtmTest {
     @Test
     void testWrongWithdraw() {
         final int withdrawAmount = 200;
-        bankAccount.withdraw(2, withdrawAmount);
-        assertEquals(INITIAL_BALANCE, bankAccount.getBalance());
+        checkDeletedWithdraw(withdrawAmount);
     }
 
     @Test
     void testLimitCaseWithdraw() {
         final double withdrawAmount = 99.5;
+        checkDeletedWithdraw(withdrawAmount);
+    }
+
+    private void checkDeletedWithdraw(double withdrawAmount) {
         bankAccount.withdraw(2, withdrawAmount);
         assertEquals(INITIAL_BALANCE, bankAccount.getBalance());
     }
