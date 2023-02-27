@@ -36,8 +36,9 @@ public class SimpleBankAccountWithAtmTest {
 
     @Test
     void testDepositWithAtm() {
-        final int depositBalance = 300;
-        bankAccount.deposit(2,depositBalance);
-        assertEquals(INITIAL_BALANCE + depositBalance - 1, bankAccount.getBalance());
+        final int depositAmount = 300;
+        bankAccount.deposit(2,depositAmount);
+        assertEquals(INITIAL_BALANCE + depositAmount - 1, bankAccount.getBalance());
     }
+
 }
