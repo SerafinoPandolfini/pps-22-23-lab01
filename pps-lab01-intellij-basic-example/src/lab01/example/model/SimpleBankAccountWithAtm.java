@@ -35,8 +35,12 @@ public class SimpleBankAccountWithAtm implements BankAccount {
 
     @Override
     public void withdraw(int userID, double amount) {
-        if (checkUser(userID)) {
+        if (checkUser(userID) && isWithdrawAllowed(amount)) {
             balance = balance - amount - 1;
         }
+    }
+
+    private boolean isWithdrawAllowed(double amount) {
+        return balance >= amount;
     }
 }
