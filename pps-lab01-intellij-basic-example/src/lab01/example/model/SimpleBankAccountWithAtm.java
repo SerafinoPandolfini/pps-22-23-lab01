@@ -41,6 +41,6 @@ public class SimpleBankAccountWithAtm implements BankAccount {
     }
 
     private boolean isWithdrawAllowed(double amount) {
-        return balance >= amount;
+        return balance - 1 >= amount;
     }
 }

@@ -54,4 +54,11 @@ public class SimpleBankAccountWithAtmTest {
         assertEquals(INITIAL_BALANCE, bankAccount.getBalance());
     }
 
+    @Test
+    void testLimitCaseWithdraw() {
+        final double withdrawAmount = 99.5;
+        bankAccount.withdraw(2, withdrawAmount);
+        assertEquals(INITIAL_BALANCE, bankAccount.getBalance());
+    }
+
 }
