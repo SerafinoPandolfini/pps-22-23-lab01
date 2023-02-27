@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,6 +37,15 @@ public class CircularListTest {
     void testCircularListIsEmpty(){
         assertTrue(emptyCircularList.isEmpty());
         assertFalse(circularList.isEmpty());
+    }
+
+    @Test
+    void testCircularListNextElement(){
+        assertEquals(Optional.empty(), emptyCircularList.next());
+        assertEquals(Optional.of(1), circularList.next());
+        assertEquals(Optional.of(2), circularList.next());
+        assertEquals(Optional.of(3), circularList.next());
+        assertEquals(Optional.of(1), circularList.next());
     }
 
     @Disabled
