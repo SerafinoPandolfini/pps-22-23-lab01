@@ -25,9 +25,7 @@ public class SimpleBankAccountWithAtmTest {
     @Test
     void testBankAccountHolder() {
         AccountHolder holder = bankAccount.getHolder();
-        assertEquals(holder.getName(), accountHolder.getName());
-        assertEquals(holder.getSurname(), accountHolder.getSurname());
-        assertEquals(holder.getId(), accountHolder.getId());
+        assertEquals(accountHolder, holder);
     }
 
     @Test
