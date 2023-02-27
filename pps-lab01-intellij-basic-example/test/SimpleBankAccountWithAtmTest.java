@@ -41,6 +41,13 @@ public class SimpleBankAccountWithAtmTest {
     }
 
     @Test
+    void testLimitCaseDeposit() {
+        final double depositAmount = 0.5;
+        bankAccount.deposit(2,depositAmount);
+        assertEquals(INITIAL_BALANCE, bankAccount.getBalance());
+    }
+
+    @Test
     void testWithdrawWithAtm() {
         final int withdrawAmount = 40;
         bankAccount.withdraw(2, withdrawAmount);

@@ -24,9 +24,13 @@ public class SimpleBankAccountWithAtm implements BankAccount {
 
     @Override
     public void deposit(int userID, double amount) {
-        if (checkUser(userID)) {
+        if (checkUser(userID) && isDepositAllowed(amount)) {
             balance = balance + amount - ATM_FEE;
         }
+    }
+
+    private boolean isDepositAllowed(double amount) {
+        return amount >= ATM_FEE;
     }
 
     @Override
@@ -43,4 +47,6 @@ public class SimpleBankAccountWithAtm implements BankAccount {
     private boolean isWithdrawAllowed(double amount) {
         return balance - ATM_FEE >= amount;
     }
+
+
 }
