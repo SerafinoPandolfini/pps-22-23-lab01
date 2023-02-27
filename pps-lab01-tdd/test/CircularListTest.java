@@ -32,6 +32,12 @@ public class CircularListTest {
         assertEquals(INITIAL_SIZE, circularList.size());
     }
 
+    @Test
+    void testCircularListIsEmpty(){
+        assertEquals(true, emptyCircularList.isEmpty());
+        assertEquals(false, circularList.isEmpty());
+    }
+
     @Disabled
     @Test public void testTodo(){
         Assertions.fail();
