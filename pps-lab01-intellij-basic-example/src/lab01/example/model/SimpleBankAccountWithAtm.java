@@ -6,9 +6,9 @@ public class SimpleBankAccountWithAtm implements BankAccount {
 
     private double balance;
 
-    public SimpleBankAccountWithAtm(AccountHolder accountHolder, double i) {
+    public SimpleBankAccountWithAtm(AccountHolder accountHolder, double initialBalance) {
         holder = accountHolder;
-        balance = i;
+        balance = initialBalance;
 
     }
 
