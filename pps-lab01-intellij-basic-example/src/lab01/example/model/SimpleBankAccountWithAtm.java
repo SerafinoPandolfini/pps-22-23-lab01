@@ -29,15 +29,15 @@ public class SimpleBankAccountWithAtm implements BankAccount {
         }
     }
 
-    private boolean checkUser(int userID) {
-        return userID == holder.getId();
-    }
-
     @Override
     public void withdraw(int userID, double amount) {
         if (checkUser(userID) && isWithdrawAllowed(amount)) {
             balance = balance - amount - 1;
         }
+    }
+
+    private boolean checkUser(int userID) {
+        return userID == holder.getId();
     }
 
     private boolean isWithdrawAllowed(double amount) {

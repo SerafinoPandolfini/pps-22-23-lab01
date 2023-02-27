@@ -23,7 +23,7 @@ public class SimpleBankAccountWithAtmTest {
     }
 
     @Test
-    void testAccountHolder() {
+    void testBankAccountHolder() {
         AccountHolder holder = bankAccount.getHolder();
         assertEquals(holder.getName(), accountHolder.getName());
         assertEquals(holder.getSurname(), accountHolder.getSurname());
