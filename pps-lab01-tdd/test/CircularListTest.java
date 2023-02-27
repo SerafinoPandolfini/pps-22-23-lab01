@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * The test suite for testing the CircularList implementation
@@ -34,8 +34,8 @@ public class CircularListTest {
 
     @Test
     void testCircularListIsEmpty(){
-        assertEquals(true, emptyCircularList.isEmpty());
-        assertEquals(false, circularList.isEmpty());
+        assertTrue(emptyCircularList.isEmpty());
+        assertFalse(circularList.isEmpty());
     }
 
     @Disabled
