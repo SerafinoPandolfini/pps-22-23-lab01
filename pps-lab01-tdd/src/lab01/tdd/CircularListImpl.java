@@ -28,14 +28,13 @@ public class CircularListImpl implements CircularList {
     public Optional<Integer> next() {
         if (isEmpty()) {
             return Optional.empty();
-        } else {
-            int currentElement = list.get(position);
-            position = position + 1;
-            if (position >= list.size()) {
-                position = 0;
-            }
-            return Optional.of(currentElement);
         }
+        int currentElement = list.get(position);
+        position = position + 1;
+        if (position >= size()) {
+            position = 0;
+        }
+        return Optional.of(currentElement);
     }
 
     @Override

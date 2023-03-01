@@ -56,6 +56,7 @@ public class CircularListTest {
         assertEquals(Optional.of(2), circularList.previous());
     }
 
+
     @Disabled
     @Test public void testTodo(){
         Assertions.fail();
