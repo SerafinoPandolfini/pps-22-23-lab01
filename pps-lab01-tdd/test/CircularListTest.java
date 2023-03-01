@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import java.util.Collections;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,8 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CircularListTest {
 
     private static final int INITIAL_SIZE = 3;
-    CircularList circularList;
-    CircularList emptyCircularList;
+    private CircularList circularList;
+    private CircularList emptyCircularList;
 
     @BeforeEach
     void beforeEach(){
