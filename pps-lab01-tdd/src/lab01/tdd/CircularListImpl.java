@@ -26,7 +26,7 @@ public class CircularListImpl implements CircularList {
 
     @Override
     public Optional<Integer> next() {
-        if (list.isEmpty()) {
+        if (isEmpty()) {
             return Optional.empty();
         } else {
             int currentElement = list.get(position);
@@ -40,7 +40,16 @@ public class CircularListImpl implements CircularList {
 
     @Override
     public Optional<Integer> previous() {
-        return Optional.empty();
+        if (isEmpty()) {
+            return Optional.empty();
+        }
+        int currentElement = list.get(position);
+        position = position - 1;
+        if (position < 0) {
+            position = size() - 1;
+        }
+        return Optional.of(currentElement);
+
     }
 
     @Override

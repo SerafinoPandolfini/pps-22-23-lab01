@@ -48,6 +48,14 @@ public class CircularListTest {
         assertEquals(Optional.of(1), circularList.next());
     }
 
+    @Test
+    void testCircularListPreviousElement(){
+        assertEquals(Optional.empty(), emptyCircularList.previous());
+        assertEquals(Optional.of(1), circularList.previous());
+        assertEquals(Optional.of(3), circularList.previous());
+        assertEquals(Optional.of(2), circularList.previous());
+    }
+
     @Disabled
     @Test public void testTodo(){
         Assertions.fail();
