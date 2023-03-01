@@ -56,6 +56,12 @@ public class CircularListTest {
         assertEquals(Optional.of(2), circularList.previous());
     }
 
+    @Test
+    void testReset(){
+        circularList.next();
+        circularList.reset();
+        assertEquals(Optional.of(1), circularList.next());
+    }
 
     @Disabled
     @Test public void testTodo(){
