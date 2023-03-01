@@ -30,4 +30,13 @@ public class CircularListWithIteratorsTest {
         assertEquals(1, forwardInterator.next());
 
     }
+
+    @Test
+    void testBackwardIterator(){
+        Iterator<Integer> backwardIterator = circularList.backwardIterator();
+        assertEquals(1, backwardIterator.next());
+        assertEquals(3, backwardIterator.next());
+        assertEquals(2, backwardIterator.next());
+
+    }
 }

@@ -48,6 +48,24 @@ public class CircularListWithIteratorsImpl implements CircularListWithIterators 
 
     @Override
     public Iterator<Integer> backwardIterator() {
-        return null;
+        return new Iterator<>() {
+
+            private int position = 0;
+
+            @Override
+            public boolean hasNext() {
+                return true;
+            }
+
+            @Override
+            public Integer next() {
+                int currentElement = list.get(position);
+                position = position - 1;
+                if (position < 0) {
+                    position = size() - 1;
+                }
+                return currentElement;
+            }
+        };
     }
 }
