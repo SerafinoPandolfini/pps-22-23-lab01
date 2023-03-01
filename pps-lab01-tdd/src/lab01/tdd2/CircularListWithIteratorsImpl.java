@@ -3,7 +3,6 @@ package lab01.tdd2;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 public class CircularListWithIteratorsImpl implements CircularListWithIterators {
     private final List<Integer> list = new ArrayList<>();
